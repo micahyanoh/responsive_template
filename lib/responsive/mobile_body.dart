@@ -21,14 +21,27 @@ class MobileBody extends StatelessWidget {
             child: Container(
               margin: const EdgeInsets.all(8),
               decoration: BoxDecoration(
-                  color: Colors.blue.shade300,
+                  color: Colors.blue.shade500,
                   borderRadius: BorderRadius.circular(15)),
             ),
           ),
           /*
             comments and videos
            */
-          ListView()
+          Expanded(
+            child: ListView.builder(
+              itemCount: 8,
+              itemBuilder: (context, index) {
+                return Container(
+                    margin: const EdgeInsets.all(8),
+                    height: 60,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(8),
+                      color: Colors.blueAccent.shade100,
+                    ));
+              },
+            ),
+          )
         ],
       ),
     );
